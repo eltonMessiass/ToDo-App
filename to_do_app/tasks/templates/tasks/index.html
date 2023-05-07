@@ -1,24 +1,49 @@
-<html>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+   
+<header class="header">
+    <h1>To-Do List</h1>
+</header>
 
+<main>
+    {% block content %}
+        <form enctype="multipart/form-data" method="post" action=".">
+    
+            {% csrf_token %}
+            
+                <h3>Task:</h3>
+                {{ form.task_name }}
+                <input class="save" type="submit" value="Save">
+           
+    
+        </form>
+    
+        <div class="list">
+            {% for task in tasks %}
 
-<form enctype="multipart/form-data" method="post" action=".">
+            
+        </div>
 
-    {% csrf_token %}
-    <div>
-    {{ form.as_p }}
-    </div>
-    <input type="submit" value="save">
+        <ul>
+            <li> <a class="update" href="{% url 'update_task' task.id %}">Update</a></li>         
+            <li><a class="delete" href="{% url 'delete' task.id %}">Delete</a></li>
+            <li><h3>{{task.task_name}}</h3></li>
+        </ul>
+    
+        {% endfor %}
+    {% endblock content %}
+    
+</main>
 
-</form>
-
-{% for task in tasks %}
-<a href="{% url 'update_task' task.id %}">Update</a>
-<a href="{% url 'delete' task.id %}">Delete</a>
-<h3>{{task.task_name}}</h3>
-
-
-
-{% endfor %}
-
+</body>
 </html>

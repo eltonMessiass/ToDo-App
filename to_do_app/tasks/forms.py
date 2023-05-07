@@ -9,3 +9,9 @@ class taskForm(forms.ModelForm):
         model = Task
         fields = ('task_name',)
 
+        widgets = { 
+            'task_name': forms.TextInput(attrs={
+                'class': 'text-field',
+            })
+        }
+

@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: #ddd;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.header h1{
+    font-size: 40pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #e0d1d1;
+}
+
+
+form{
+    width: 70%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+form h3{
+    color: #242020;
+    font-size: 25pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.text-field{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20pt;
+    outline: none;
+    border: none;
+    background-color: #d3c1c1;
+}
+
+.save{
+    width: 110px;
+    font-size: 20pt;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+
+}
+.save:hover{
+    background-color: #a79b9b;
+}
+
+
+/* .list{
+    display: grid;
+    grid-template-columns: auto;
+    width: 70%;
+} */
+
+.task-list{
+    display: flex;
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    align-items: center;
+    
+}
+.update{
+    width: 70px;
+    background-color: blue;
+    color: white;
+    font-size: 15pt;
+    margin: 7px;
+    padding-top:8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.delete{
+    width: 70px;
+    padding-top: 5px;
+    background-color: red;
+    font-size: 15pt;
+    margin: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #a79b9b;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  li {
+    float: left;
+    
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  li h3{
+    text-align: center;
+    padding-top: 15px;
+    width: 750px;
+    font-size: 15pt;
+  }
