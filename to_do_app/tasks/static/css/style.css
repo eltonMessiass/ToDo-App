@@ -138,3 +138,12 @@ ul {
     width: 750px;
     font-size: 15pt;
   }
+
+
+
+  .delete-container{
+    width: 80%;
+    height: 70px;
+    background-color: aqua;
+    margin: 0 auto;
+  }

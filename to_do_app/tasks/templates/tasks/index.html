@@ -1,3 +1,5 @@
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +16,9 @@
 <header class="header">
     <h1>To-Do List</h1>
 </header>
-
+{% block content %}
 <main>
-    {% block content %}
+    
         <form enctype="multipart/form-data" method="post" action=".">
     
             {% csrf_token %}
@@ -41,9 +43,9 @@
         </ul>
     
         {% endfor %}
-    {% endblock content %}
+    
     
 </main>
-
+{% endblock %}
 </body>
 </html>
